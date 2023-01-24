@@ -1,0 +1,12 @@
+let arr = [1, 2, 3, 4, 5, 6, 7];
+console.log(arr.length);
+console.log(arr.toString());
+console.log(arr.join("-"));
+console.log(arr.pop());
+console.log(arr);
+arr.push(8);
+console.log(arr);
+arr.unshift(999);
+console.log(arr);
+arr.shift(666);
+console.log(arr);

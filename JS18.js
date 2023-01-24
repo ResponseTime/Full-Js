@@ -1,0 +1,13 @@
+let arr = [1, 45, 87, 8, 2, 77, 6, 7];
+console.log(arr.length);
+arr = arr.concat([8, 9, 10]);
+console.log(arr);
+arr.sort((a, b) => a - b);
+console.log(arr);
+arr.reverse();
+console.log(arr);
+let ar = arr.splice(2, 3, 100, 200, 300);
+console.log(ar);
+console.log(arr);
+let a = arr.slice(2, 6);
+console.log(a);

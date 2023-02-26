@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="populate">
+
+    </div>
+</body>
+<script>
+    let popl = document.getElementById("populate");
+    const option = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '7f77a966fcmsha025da6e15b104dp127106jsn46a613e82427',
+            'X-RapidAPI-Host': 'joke110.p.rapidapi.com'
+        }
+    };
+
+    fetch('https://joke110.p.rapidapi.com/random_joke', option)
+        .then(response => response.json())
+        .then(response => {
+            popl.innerHTML = response.setup + "<br>" + response.punchline;
+        })
+        .catch(err => console.error(err));
+</script>
+
+</html>

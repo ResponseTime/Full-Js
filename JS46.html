@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pop">
+
+    </div>
+</body>
+<script>
+    let x = document.getElementById("pop")
+    setTimeout(() => {
+        x.innerText = "Hello World"
+    }, 1000);
+    setInterval(() => {
+        x.innerText = "Hello World interval"
+    }, 1000);
+    let y = setTimeout(() => {
+        x.innerText = "Hello World timeout"
+    }, 1000);
+    clearTimeout(y)
+</script>
+</html>

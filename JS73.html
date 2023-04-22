@@ -9,6 +9,7 @@
 <body>
     <div id="allT"></div>
     <button id="som">Click to add Task</button>
+    <button id="some">Click to delete task</button>
 </body>
 <script>
     let bt = document.getElementById("som")
@@ -25,7 +26,22 @@
             }
         }
     })
-       
-   
+    let btw = document.getElementById("some")
+    btw.addEventListener('click',()=>{
+        let f = prompt("Enter your task")
+        for(let k in localStorage){
+            if(localStorage[k]==f){
+                localStorage.removeItem(k)
+            }
+        }
+        let d = document.getElementById("allT");
+        d.innerHTML = ""
+        for(k in localStorage){
+            if(localStorage.getItem(k)!=null){
+                d.append(localStorage.getItem(k))
+                d.append(document.createElement("br"))
+            }
+        }
+    })
 </script>
 </html>
